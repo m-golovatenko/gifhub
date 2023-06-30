@@ -1,0 +1,7 @@
+.gifs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 296px);
+  gap: 16px;
+  width: 920px;
+  margin: 0 auto;
+}

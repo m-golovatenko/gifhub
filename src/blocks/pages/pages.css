@@ -1,0 +1,5 @@
+.pages {
+  display: flex;
+  gap: 41px;
+  margin: 0 auto;
+}

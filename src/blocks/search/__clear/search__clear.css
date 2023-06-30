@@ -1,0 +1,14 @@
+.search__clear {
+  margin: 0;
+  padding: 16px;
+  width: 56px;
+  height: 56px;
+  border: none;
+  background: transparent url(../../../images/search__clear.svg) no-repeat center / contain;
+  background-size: 24px 24px;
+}
+
+.search__clear:hover {
+  cursor: pointer;
+  color: #633ad6;
+}

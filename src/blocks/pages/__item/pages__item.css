@@ -1,0 +1,10 @@
+.pages__item {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.pages__item:hover {
+  cursor: pointer;
+  color: #ea5400;
+}

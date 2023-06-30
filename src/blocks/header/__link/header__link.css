@@ -1,0 +1,20 @@
+.header__link {
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-align: center;
+  box-sizing: border-box;
+  width: 141px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  padding: 8px 12px;
+}
+.header__link:active {
+  background-color: #eeeff2;
+}
+
+.header__link:hover {
+  cursor: pointer;
+}

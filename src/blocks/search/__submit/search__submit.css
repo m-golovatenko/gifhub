@@ -1,0 +1,15 @@
+.search__submit {
+  margin: 0;
+  padding: 16px;
+  width: 56px;
+  height: 56px;
+  border: none;
+  background: #633ad6 url(../../../images/search__submit.svg) no-repeat center / contain;
+  border-radius: 0px 8px 8px 0px;
+  background-size: 24px 24px;
+}
+
+.search__submit:hover {
+  cursor: pointer;
+  background-color: #4c2da5;
+}
