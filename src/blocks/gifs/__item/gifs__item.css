@@ -1,7 +1,26 @@
 .gifs__item {
   display: block;
+  margin: 0;
   width: 296px;
   height: 200px;
-  background: #d9d9d9;
   border-radius: 8px;
+  position: relative;
+  opacity: 0.99;
+  overflow: hidden;
+}
+
+.gifs__item::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0, 0.64));
+  opacity: 0;
+}
+
+.gifs__item:hover::before {
+  cursor: pointer;
+  z-index: 1;
+  opacity: 1;
 }

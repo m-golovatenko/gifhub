@@ -16,6 +16,8 @@
 /*GIFS*/
 @import url(./blocks/gifs/gifs.css);
 @import url(./blocks/gifs/__item/gifs__item.css);
+@import url(./blocks/gifs/__image/gifs__image.css);
+@import url(./blocks/gifs/__title/gifs__title.css);
 /*PAGES*/
 @import url(./blocks/pages/pages.css);
 @import url(./blocks/pages/__button/pages__button.css);
