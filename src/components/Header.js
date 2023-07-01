@@ -12,7 +12,7 @@ function Header() {
             <a href="/search" className="header__link">Поиск</a>
           </li>
           <li>
-            <a href="/gifs" className="header__link">Тренды</a>
+            <a href="/gifs/1" className="header__link">Тренды</a>
           </li>
           <li>
             <a href="/random-gif" className="header__link">Случайный гиф</a>

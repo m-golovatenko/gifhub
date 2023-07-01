@@ -1,19 +1,23 @@
 import React from 'react';
-import Pagination from './Pagination';
-import Gif from './Gif';
 import Form from './Form';
+import Gifs from './Gifs';
 import api from '../utils/api';
 
 function Main() {
-  const [searchGifs, setTrendingGifs] = React.useState([]);
+  const [searchGifs, setSearchGifs] = React.useState([]);
   const [searchQuery, setSearchQuery] = React.useState('');
   const [isSubmitted, setIsSubmitted] = React.useState(false);
 
   React.useEffect(() => {
     if (isSubmitted) {
-      api.getSearchGifs(searchQuery).then(data => {
-        setTrendingGifs(data.data);
-      });
+      api
+        .getSearchGifs(searchQuery)
+        .then(data => {
+          setSearchGifs(data.data);
+        })
+        .catch(error => {
+          console.error(error);
+        });
       setSearchQuery('');
       setIsSubmitted(false);
     }
@@ -37,12 +41,8 @@ function Main() {
         handleClear={handleClear}
       />
 
-      <div className="gifs">
-        {searchGifs.map(gif => (
-          <Gif key={gif.id} gifUrl={gif.images.original.url} title={gif.title} />
-        ))}
-      </div>
-      <Pagination />
+      {searchGifs.length !== 0 && <Gifs gifs={searchGifs} /> }
+
     </div>
   );
 }

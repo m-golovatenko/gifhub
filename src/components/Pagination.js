@@ -4,34 +4,34 @@ function Pagination() {
       <button className="pages__button">Назад</button>
       <ul className="pages__list">
         <li className="pages__item">
-          <a>1</a>
+          <a href="/gifs/:1">1</a>
         </li>
         <li className="pages__item">
-          <a>2</a>
+          <a href="/gifs/:2">2</a>
         </li>
         <li className="pages__item">
-          <a>3</a>
+          <a href="/gifs/:3">3</a>
         </li>
         <li className="pages__item">
-          <a>4</a>
+          <a href="/gifs/:4">4</a>
         </li>
         <li className="pages__item">
-          <a>5</a>
+          <a href="/gifs/:5">5</a>
         </li>
         <li className="pages__item">
-          <a>6</a>
+          <a href="/gifs/:6">6</a>
         </li>
         <li className="pages__item">
-          <a>7</a>
+          <a href="/gifs/:7">7</a>
         </li>
         <li className="pages__item">
-          <a>8</a>
+          <a href="/gifs/:8">8</a>
         </li>
         <li>
           <p className="pages__item-text">...</p>
         </li>
         <li className="pages__item">
-          <a>15</a>
+          <a href="/gifs/:15">15</a>
         </li>
       </ul>
 

@@ -1,14 +1,15 @@
 import React from 'react';
-import Pagination from './Pagination';
-import Gif from './Gif';
+import { useParams  } from 'react-router-dom';
+import Gifs from './Gifs';
 import api from '../utils/api';
 
 function Trending() {
   const [trendingGifs, setTrendingGifs] = React.useState([]);
+  let { page } = useParams();
 
   React.useEffect(() => {
     api
-      .getTrendingGifs()
+      .getTrendingGifs(page)
       .then(data => {
         setTrendingGifs(data.data);
       })
@@ -18,14 +19,7 @@ function Trending() {
   }, []);
 
   return (
-    <>
-      <div className="gifs">
-        {trendingGifs.map(gif => (
-          <Gif key={gif.id} gifUrl={gif.images.original.url} title={gif.title} />
-        ))}
-      </div>
-      <Pagination />
-    </>
+    <Gifs gifs={trendingGifs} />
   );
 }
 

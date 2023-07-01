@@ -14,11 +14,12 @@ class Api {
     return res.json();
   }
 
-  getTrendingGifs() {
+  getTrendingGifs(page) {
+    const currentPage = page-1;
     return fetch(`${this._baseUrl}/trending?${new URLSearchParams ({
       api_key: this.api_key,
       limit: 12,
-      offset: 0
+      offset: currentPage
     })}`)
     .then(this._getResponseData);
   }
