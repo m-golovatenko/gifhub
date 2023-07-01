@@ -1,5 +1,6 @@
 import React from 'react';
 import Pagination from './Pagination';
+import gif from '../images/gifs__image.png';
 
 function Main({ isSearchActive }) {
   return (

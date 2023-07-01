@@ -1,14 +1,14 @@
 .header__link {
   margin: 0;
-  padding: 0;
+  text-decoration: none;
   display: block;
   text-align: center;
   box-sizing: border-box;
   width: 141px;
-  height: 40px;
+  color: #565656;
   font-size: 16px;
-  line-height: 24px;
   font-weight: 400;
+  line-height: 24px;
   padding: 8px 12px;
 }
 .header__link:active {
