@@ -3,8 +3,20 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
+import api from '../utils/api';
 
 function App() {
+  const [gifs, setGifs] = React.useState([]);
+
+  React.useEffect(() => {
+    api.getTrendingGifs()
+        .then(data => {
+          setGifs(data.data);
+        })
+        .catch(error => {
+          console.error(error);
+        })
+  }, [])
   
   return (
     <div className="page">
@@ -12,11 +24,11 @@ function App() {
 
       <Routes>
         <Route path="/search" element={
-          <Main isSearchActive={true} />
+          <Main isSearchActive={true} gifs={gifs} />
         } />
 
         <Route path="/gifs" element={
-          <Main isSearchActive={false} />
+          <Main isSearchActive={false} gifs={gifs} />
         } />
 
         {/* <Route path="/random-gif" element={

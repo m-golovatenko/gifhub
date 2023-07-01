@@ -1,8 +1,11 @@
 import React from 'react';
 import Pagination from './Pagination';
-import gif from '../images/gifs__image.png';
+import Gif from './Gif';
+// import gif from '../images/gifs__image.png';
 
-function Main({ isSearchActive }) {
+function Main({ isSearchActive, gifs }) {
+  console.log(gifs);
+
   return (
     <div className="container">
       {isSearchActive && (
@@ -14,7 +17,13 @@ function Main({ isSearchActive }) {
       )}
 
       <div className="gifs">
-        <figure className="gifs__item">
+        {gifs.map(gif => <Gif
+                            key={gif.id}
+                            gifUrl={gif.images.original.url}
+                            title={gif.title}
+                          />)}
+
+        {/* <figure className="gifs__item">
           <img className="gifs__image" src={gif} alt="" />
           <figcaption className="gifs__title">123</figcaption>
         </figure>
@@ -53,7 +62,7 @@ function Main({ isSearchActive }) {
         <figure className="gifs__item">
           <img className="gifs__image" src={gif} alt="" />
           <figcaption className="gifs__title">123</figcaption>
-        </figure>
+        </figure> */}
       </div>
 
       <Pagination />
