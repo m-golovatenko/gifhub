@@ -1,4 +1,6 @@
-.pages__item {
+.pages__item-text {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
   font-size: 12px;
   font-weight: 400;
@@ -8,18 +10,6 @@
   text-align: center;
   color: #565656;
   font-size: 16px;
-  font-family: Roboto;
-  font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  border-radius: 8px;
-}
-
-.pages__item:active {
-  color: #fff;
-  background-color: #633ad6;
-}
-
-.pages__item:hover {
-  cursor: pointer;
 }

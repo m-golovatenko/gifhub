@@ -20,16 +20,40 @@ function Main() {
         <div className="gifs__item"></div>
       </div>
       <div className="pages">
-        <a className="pages__item">Назад</a>
-        <a className="pages__item">1</a>
-        <a className="pages__item">2</a>
-        <a className="pages__item">3</a>
-        <a className="pages__item">4</a>
-        <a className="pages__item">5</a>
-        <a className="pages__item">6</a>
-        <a className="pages__item">7</a>
-        <a className="pages__item">8</a>
-        <a className="pages__item">Вперед</a>
+        <button className="pages__button">Назад</button>
+        <ul className="pages__list">
+          <li className="pages__item">
+            <a>1</a>
+          </li>
+          <li className="pages__item">
+            <a>2</a>
+          </li>
+          <li className="pages__item">
+            <a>3</a>
+          </li>
+          <li className="pages__item">
+            <a>4</a>
+          </li>
+          <li className="pages__item">
+            <a>5</a>
+          </li>
+          <li className="pages__item">
+            <a>6</a>
+          </li>
+          <li className="pages__item">
+            <a>7</a>
+          </li>
+          <li className="pages__item">
+            <a>8</a>
+          </li>
+          <li>
+            <p className="pages__item-text">...</p>
+          </li>
+          <li className="pages__item">
+            <a>15</a>
+          </li>
+        </ul>
+        <button className="pages__button">Вперед</button>
       </div>
     </div>
   );
