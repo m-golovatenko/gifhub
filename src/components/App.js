@@ -4,7 +4,7 @@ import Header from './Header';
 import Main from './Pages/Main';
 import Footer from './Footer';
 import Trending from './Pages/Trending';
-import RandomGif from './Gifs/RandomGif';
+import RandomGif from './Pages/RandomGif';
 import NavBar from './NavBar';
 
 function App() {
