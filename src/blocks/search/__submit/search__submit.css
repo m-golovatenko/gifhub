@@ -7,6 +7,9 @@
   background: #633ad6 url(../../../images/search__submit.svg) no-repeat center / contain;
   border-radius: 0px 8px 8px 0px;
   background-size: 24px 24px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .search__submit:hover {

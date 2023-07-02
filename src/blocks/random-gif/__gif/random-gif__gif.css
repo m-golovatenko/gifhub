@@ -1,0 +1,7 @@
+.random-gif__gif {
+  display: block;
+  width: 812px;
+  height: 528px;
+  object-fit: contain;
+  object-position: center;
+}

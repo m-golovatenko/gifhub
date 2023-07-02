@@ -27,6 +27,11 @@
 @import url(./blocks/pages/__item/_active/pages__item_active.css);
 @import url(./blocks/pages/__item-text/pages__item-text.css);
 @import url(./blocks/pages/__list/pages__list.css);
+/*PAGES*/
+@import url(./blocks/random-gif/random-gif.css);
+@import url(./blocks/random-gif/__gif/random-gif__gif.css);
 /*FOOTER*/
 @import url(./blocks/footer/footer.css);
 @import url(./blocks/footer/__copyright/footer__copyright.css);
+/*ADDITIONAL*/
+@import url(./blocks/button/button.css);

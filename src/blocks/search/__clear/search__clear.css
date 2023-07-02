@@ -6,6 +6,9 @@
   border: none;
   background: transparent url(../../../images/search__clear.svg) no-repeat center / contain;
   background-size: 24px 24px;
+  position: absolute;
+  top: 0;
+  right: 56px;
 }
 
 .search__clear:hover {

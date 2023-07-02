@@ -10,35 +10,43 @@ class Api {
 
   _getResponseData(res) {
     if (!res.ok) {
-        return Promise.reject(`Ошибка: ${res.status}`);
+      return Promise.reject(`Ошибка: ${res.status}`);
     }
     return res.json();
   }
 
   getTrendingGifs(page) {
-    const currentPage = page-1;
-    return fetch(`${this._baseUrl}/trending?${new URLSearchParams ({
-      api_key: this.api_key,
-      limit: this.limit,
-      offset: currentPage*this.limit
-    })}`)
-    .then(this._getResponseData);
+    const currentPage = page - 1;
+    return fetch(
+      `${this._baseUrl}/trending?${new URLSearchParams({
+        api_key: this.api_key,
+        limit: this.limit,
+        offset: currentPage * this.limit
+      })}`
+    ).then(this._getResponseData);
   }
 
   getSearchGifs(queryString, page) {
-    const currentPage = page-1;
-    return fetch(`${this._baseUrl}/search?${new URLSearchParams ({
-      api_key: this.api_key,
-      q: queryString,
-      limit: this.limit,
-      offset: currentPage*this.limit
-    })}`)
-    .then(this._getResponseData);
+    const currentPage = page - 1;
+    return fetch(
+      `${this._baseUrl}/search?${new URLSearchParams({
+        api_key: this.api_key,
+        q: queryString,
+        limit: this.limit,
+        offset: currentPage * this.limit
+      })}`
+    ).then(this._getResponseData);
   }
 
-  
+  getRandomGif() {
+    return fetch(
+      `${this._baseUrl}/random?${new URLSearchParams({
+        api_key: this.api_key
+      })}`
+    ).then(this._getResponseData);
+  }
 }
 
-const api = new Api({baseUrl, api_key});
+const api = new Api({ baseUrl, api_key });
 
 export default api;
