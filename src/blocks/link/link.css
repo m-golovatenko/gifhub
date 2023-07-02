@@ -1,0 +1,20 @@
+.link {
+  display: block;
+  margin: 0 auto;
+  width: 240px;
+  padding: 16px 24px;
+  border: none;
+  background-color: #633ad6;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  border-radius: 12px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.link:hover {
+  cursor: pointer;
+  background-color: #4c2da5;
+}

@@ -1,0 +1,7 @@
+.error {
+  width: 319px;
+  margin: 150px auto 105px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

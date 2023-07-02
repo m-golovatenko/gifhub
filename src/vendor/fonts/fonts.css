@@ -13,3 +13,11 @@
   font-display: swap;
   src: url('./Roboto-700.woff') format('woff2');
 }
+
+@font-face {
+  font-family: 'Junegull';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./Junegull-400.woff2') format('woff2'), url('./Junegull-400.woff') format('woff');
+}

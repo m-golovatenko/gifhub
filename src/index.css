@@ -5,7 +5,7 @@
 @import url(./blocks/header/header.css);
 @import url(./blocks/header/__logo/header__logo.css);
 /*NAV BAR*/
-@import url(./blocks/nav/__nav/nav.css);
+@import url(./blocks/nav//nav.css);
 @import url(./blocks/nav/__link/nav__link.css);
 @import url(./blocks/nav/__link/_active/nav__link_active.css);
 /*MAIN*/
@@ -35,3 +35,8 @@
 @import url(./blocks/footer/__copyright/footer__copyright.css);
 /*ADDITIONAL*/
 @import url(./blocks/button/button.css);
+@import url(./blocks/link/link.css);
+/*ERROR*/
+@import url(./blocks/error/error.css);
+@import url(./blocks/error/__code/error__code.css);
+@import url(./blocks/error/__text/error__text.css);
