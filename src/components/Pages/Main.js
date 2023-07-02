@@ -1,8 +1,8 @@
 import React from 'react';
-import { useParams  } from 'react-router-dom';
-import Form from './Form';
-import Gifs from './Gifs';
-import api from '../utils/api';
+import { useParams } from 'react-router-dom';
+import Form from '../Form/Form';
+import Gifs from '../Gifs/Gifs';
+import api from '../../utils/api';
 
 function Main() {
   const [searchGifs, setSearchGifs] = React.useState([]);
@@ -45,8 +45,7 @@ function Main() {
         handleClear={handleClear}
       />
 
-      {searchGifs.length !== 0 && <Gifs gifs={searchGifs} pagination={pagination} /> }
-
+      {searchGifs.length !== 0 && <Gifs gifs={searchGifs} pagination={pagination} />}
     </div>
   );
 }

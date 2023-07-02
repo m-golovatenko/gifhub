@@ -1,9 +1,9 @@
 import React from 'react';
-import { Route, Routes, Navigate  } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import Header from './Header';
-import Main from './Main';
+import Main from './Pages/Main';
 import Footer from './Footer';
-import Trending from './Trending';
+import Trending from './Pages/Trending';
 
 function App() {
   return (

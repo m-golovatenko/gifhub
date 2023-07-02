@@ -4,7 +4,7 @@ function Gif({ gifUrl, title }) {
       <img className="gifs__image" src={gifUrl} alt={title} />
       <p className="gifs__title">{title}</p>
     </li>
-  )
+  );
 }
 
 export default Gif;
