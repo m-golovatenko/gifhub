@@ -1,7 +1,7 @@
 import Pagination from './Pagination';
 import Gif from './Gif';
 
-function Gifs({ gifs }) {
+function Gifs({ gifs, pagination }) {
   return (
     <>
       <div className="gifs">
@@ -10,7 +10,7 @@ function Gifs({ gifs }) {
         ))}
       </div>
 
-      <Pagination />
+      <Pagination pagination={pagination} />
     </>
   );
 }

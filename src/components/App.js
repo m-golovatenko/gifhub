@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/search" element={<Main />} />
 
-          <Route path="/gifs/:page" element={<Trending />} />
+          <Route path="/trending/:page" element={<Trending />} />
 
           {/* <Route path="/random-gif" element={
           <RandomGif />

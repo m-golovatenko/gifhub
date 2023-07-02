@@ -5,6 +5,7 @@ import api from '../utils/api';
 
 function Trending() {
   const [trendingGifs, setTrendingGifs] = React.useState([]);
+  const [pagination, setPagination] = React.useState(0);
   let { page } = useParams();
 
   React.useEffect(() => {
@@ -12,14 +13,16 @@ function Trending() {
       .getTrendingGifs(page)
       .then(data => {
         setTrendingGifs(data.data);
+        setPagination(data.pagination);
       })
       .catch(error => {
         console.error(error);
+        console.log('here');
       });
-  }, []);
+  }, [page]);
 
   return (
-    <Gifs gifs={trendingGifs} />
+    <Gifs gifs={trendingGifs} pagination={pagination} />
   );
 }
 

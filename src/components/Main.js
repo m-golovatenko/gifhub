@@ -1,4 +1,5 @@
 import React from 'react';
+import { useParams  } from 'react-router-dom';
 import Form from './Form';
 import Gifs from './Gifs';
 import api from '../utils/api';
@@ -7,13 +8,14 @@ function Main() {
   const [searchGifs, setSearchGifs] = React.useState([]);
   const [searchQuery, setSearchQuery] = React.useState('');
   const [isSubmitted, setIsSubmitted] = React.useState(false);
+  let { page } = useParams();
 
   React.useEffect(() => {
     if (isSubmitted) {
       api
-        .getSearchGifs(searchQuery)
+        .getSearchGifs(searchQuery, page)
         .then(data => {
-          setSearchGifs(data.data);
+          setSearchGifs(data);
         })
         .catch(error => {
           console.error(error);
@@ -41,7 +43,7 @@ function Main() {
         handleClear={handleClear}
       />
 
-      {searchGifs.length !== 0 && <Gifs gifs={searchGifs} /> }
+      {searchGifs.length !== 0 && <Gifs gifs={searchGifs} pagination={searchGifs.pagination} /> }
 
     </div>
   );

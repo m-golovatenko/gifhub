@@ -5,6 +5,7 @@ class Api {
   constructor(options) {
     this._baseUrl = options.baseUrl;
     this.api_key = options.api_key;
+    this.limit = 12;
   }
 
   _getResponseData(res) {
@@ -18,18 +19,19 @@ class Api {
     const currentPage = page-1;
     return fetch(`${this._baseUrl}/trending?${new URLSearchParams ({
       api_key: this.api_key,
-      limit: 12,
-      offset: currentPage
+      limit: this.limit,
+      offset: currentPage*this.limit
     })}`)
     .then(this._getResponseData);
   }
 
-  getSearchGifs(queryString) {
+  getSearchGifs(queryString, page) {
+    const currentPage = page-1;
     return fetch(`${this._baseUrl}/search?${new URLSearchParams ({
       api_key: this.api_key,
       q: queryString,
-      limit: 12,
-      offset: 0
+      limit: this.limit,
+      offset: currentPage*this.limit
     })}`)
     .then(this._getResponseData);
   }
