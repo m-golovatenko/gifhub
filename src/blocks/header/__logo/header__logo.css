@@ -6,3 +6,11 @@
   height: 132px;
   align-self: center;
 }
+
+@media (max-width: 540px) {
+  .header__logo {
+    width: 156px;
+    height: 66px;
+    background-size: contain;
+  }
+}

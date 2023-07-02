@@ -1,4 +1,5 @@
 .gifs__image {
+  display: block;
   width: 296px;
   height: 200px;
 }

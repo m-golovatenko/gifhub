@@ -15,3 +15,12 @@
 .nav__link:hover {
   cursor: pointer;
 }
+
+@media (max-width: 540px) {
+  .nav__link {
+    width: auto;
+    padding: 8px 8px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
