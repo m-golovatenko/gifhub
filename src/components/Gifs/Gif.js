@@ -1,8 +1,13 @@
-function Gif({ gifUrl, title }) {
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+function Gif({ gifUrl, title, id }) {
   return (
-    <li className="gifs__item">
-      <img className="gifs__image" src={gifUrl} alt={title} />
-      <p className="gifs__title">{title}</p>
+    <li>
+      <Link to={'/:id'} className="gifs__item">
+        <img className="gifs__image" src={gifUrl} alt={title} />
+        <p className="gifs__title">{title}</p>
+      </Link>
     </li>
   );
 }

@@ -4,8 +4,7 @@ import Form from '../Form/Form';
 import Gifs from '../Gifs/Gifs';
 import api from '../../utils/api';
 
-function Main() {
-  const [searchGifs, setSearchGifs] = React.useState([]);
+function Main({ searchGifs, setSearchGifs }) {
   const [pagination, setPagination] = React.useState(0);
   const [searchQuery, setSearchQuery] = React.useState('');
   const [isSubmitted, setIsSubmitted] = React.useState(false);

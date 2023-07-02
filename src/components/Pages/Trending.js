@@ -3,8 +3,7 @@ import { useParams } from 'react-router-dom';
 import Gifs from '../Gifs/Gifs';
 import api from '../../utils/api';
 
-function Trending() {
-  const [trendingGifs, setTrendingGifs] = React.useState([]);
+function Trending({ trendingGifs, setTrendingGifs }) {
   const [pagination, setPagination] = React.useState(0);
   let { page } = useParams();
 

@@ -7,9 +7,11 @@ import Trending from './Pages/Trending';
 import RandomGif from './Pages/RandomGif';
 import NavBar from './NavBar';
 import Error from './Error';
+import GifPage from './Gifs/GifPage';
 
 function App() {
-  const [isNavBarNeeded, setIsNavBarNeeded] = React.useState(false);
+  const [trendingGifs, setTrendingGifs] = React.useState([]);
+  const [searchGifs, setSearchGifs] = React.useState([]);
 
   return (
     <div className="page">
@@ -18,11 +20,20 @@ function App() {
 
       <main className="container">
         <Routes>
-          <Route path="/search" element={<Main />} />
+          <Route
+            path="/search"
+            element={<Main searchGifs={searchGifs} setSearchGifs={setSearchGifs} />}
+          />
 
-          <Route path="/trending/:page" element={<Trending />} />
+          <Route
+            path="/trending/:page"
+            element={<Trending trendingGifs={trendingGifs} setTrendingGifs={setTrendingGifs} />}
+          />
 
           <Route path="/random-gif" element={<RandomGif />} />
+
+          <Route path="/search/:id" element={<GifPage />} />
+          <Route path="/trending/:id" element={<GifPage />} />
 
           <Route path="*" element={<Error />} />
         </Routes>
