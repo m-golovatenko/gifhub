@@ -1,5 +1,7 @@
-.pages__button {
+.pages__nav {
   border: none;
+  text-decoration: none;
+  text-align: center;
   width: 100px;
   padding: 8px 12px;
   border-radius: 8px;
@@ -10,7 +12,7 @@
   line-height: 24px;
 }
 
-.pages__button:hover {
+.pages__nav:hover {
   cursor: pointer;
   background: #4c2da5;
 }
