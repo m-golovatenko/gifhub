@@ -6,6 +6,7 @@ import api from '../utils/api';
 
 function Main() {
   const [searchGifs, setSearchGifs] = React.useState([]);
+  const [pagination, setPagination] = React.useState(0);
   const [searchQuery, setSearchQuery] = React.useState('');
   const [isSubmitted, setIsSubmitted] = React.useState(false);
   let { page } = useParams();
@@ -15,7 +16,8 @@ function Main() {
       api
         .getSearchGifs(searchQuery, page)
         .then(data => {
-          setSearchGifs(data);
+          setSearchGifs(data.data);
+          setPagination(data.pagination);
         })
         .catch(error => {
           console.error(error);
@@ -43,7 +45,7 @@ function Main() {
         handleClear={handleClear}
       />
 
-      {searchGifs.length !== 0 && <Gifs gifs={searchGifs} pagination={searchGifs.pagination} /> }
+      {searchGifs.length !== 0 && <Gifs gifs={searchGifs} pagination={pagination} /> }
 
     </div>
   );

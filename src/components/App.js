@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="page">
       <Header />
-      <div className="container">
+      <main className="container">
         <Routes>
           <Route path="/search" element={<Main />} />
 
@@ -21,7 +21,7 @@ function App() {
 
           <Route path="*" element={<Navigate to="/search" replace />} />
         </Routes>
-      </div>
+      </main>
 
       <Footer />
     </div>

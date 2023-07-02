@@ -4,11 +4,11 @@ import Gif from './Gif';
 function Gifs({ gifs, pagination }) {
   return (
     <>
-      <div className="gifs">
+      <ul className="gifs">
         {gifs.map(gif => (
           <Gif key={gif.id} gifUrl={gif.images.original.url} title={gif.title} />
         ))}
-      </div>
+      </ul>
 
       <Pagination pagination={pagination} />
     </>

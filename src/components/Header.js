@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link  } from 'react-router-dom';
 
 function Header() {
   
 
   return (
-    <div className="header">
-      <a className="header__logo" href="/" aria-label="Логотип сайта." />
+    <header className="header">
+      <a className="header__logo" href="#" aria-label="Логотип сайта." />
       <nav>
         <ul className="header__nav">
           <li>
@@ -19,7 +20,7 @@ function Header() {
           </li>
         </ul>
       </nav>
-    </div>
+    </header>
   );
 }
 
