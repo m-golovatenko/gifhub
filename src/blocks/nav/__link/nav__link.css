@@ -1,4 +1,4 @@
-.header__link {
+.nav__link {
   margin: 0;
   text-decoration: none;
   display: block;
@@ -12,6 +12,6 @@
   padding: 8px 12px;
 }
 
-.header__link:hover {
+.nav__link:hover {
   cursor: pointer;
 }
