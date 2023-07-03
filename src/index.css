@@ -10,6 +10,7 @@
 @import url(./blocks/nav/__link/_active/nav__link_active.css);
 /*MAIN*/
 @import url(./blocks/container/container.css);
+@import url(./blocks/search-page-text/search-page-text.css);
 /*SEARCH*/
 @import url(./blocks/search/search.css);
 @import url(./blocks/search/__bar/search__bar.css);

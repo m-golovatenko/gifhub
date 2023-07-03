@@ -7,10 +7,12 @@ import Trending from './Pages/Trending';
 import RandomGif from './Pages/RandomGif';
 import Error from './Error';
 import GifPage from './Gifs/GifPage';
+import Loader from './Loader';
 
 function App() {
   const [trendingGifs, setTrendingGifs] = React.useState([]);
   const [searchGifs, setSearchGifs] = React.useState([]);
+  const [isLoading, setIsLoading] = React.useState(false);
 
   return (
     <div className="page">
@@ -25,10 +27,20 @@ function App() {
 
           <Route
             path="/trending/:page"
-            element={<Trending trendingGifs={trendingGifs} setTrendingGifs={setTrendingGifs} />}
+            element={
+              <Trending
+                trendingGifs={trendingGifs}
+                setTrendingGifs={setTrendingGifs}
+                isLoading={isLoading}
+                setIsLoading={setIsLoading}
+              />
+            }
           />
 
-          <Route path="/random-gif" element={<RandomGif />} />
+          <Route
+            path="/random-gif"
+            element={<RandomGif isLoading={isLoading} setIsLoading={setIsLoading} />}
+          />
 
           <Route path="/trending/:id" element={<GifPage gifs={trendingGifs} />} />
 

@@ -1,48 +1,60 @@
-@keyframes animloader {
-  0% {
-    top: 0;
-    color: #633ad6;
+@keyframes slide {
+  0%,
+  100% {
+    bottom: -35px;
   }
-  50% {
-    top: 30px;
-    color: #4c2da5;
+  25%,
+  75% {
+    bottom: -2px;
+  }
+  20%,
+  80% {
+    bottom: 2px;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(-15deg);
+  }
+  25%,
+  75% {
+    transform: rotate(0deg);
   }
   100% {
-    top: 0;
-    color: #633ad6;
+    transform: rotate(25deg);
   }
 }
 
 .loader {
-  width: 16px;
-  height: 16px;
-  box-shadow: 0 30px, 0 -30px;
-  border-radius: 4px;
-  background: currentColor;
-  display: block;
-  margin: -50px auto 0;
+  width: 84px;
+  height: 84px;
   position: relative;
-  color: #fff;
-  transform: translateY(30px);
-  box-sizing: border-box;
-  animation: animloader 2s ease infinite;
-}
-.loader::after,
-.loader::before {
-  content: '';
-  box-sizing: border-box;
-  width: 16px;
-  height: 16px;
-  box-shadow: 0 30px, 0 -30px;
+  background: #fff;
   border-radius: 4px;
-  background: currentColor;
-  color: #fff;
-  position: absolute;
-  left: 30px;
-  top: 0;
-  animation: animloader 2s 0.2s ease infinite;
+  overflow: hidden;
 }
-.loader::before {
-  animation-delay: 0.4s;
-  left: 60px;
+.loader:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+  transform: rotate(45deg) translate(30%, 40%);
+  background: #8b6edb;
+  box-shadow: 32px -34px 0 5px #4c2da5;
+  animation: slide 2s infinite ease-in-out alternate;
+}
+.loader:after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #4c2da5;
+  transform: rotate(0deg);
+  transform-origin: 35px 145px;
+  animation: rotate 2s infinite ease-in-out;
 }

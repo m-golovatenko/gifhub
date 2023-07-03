@@ -17,6 +17,11 @@
   background-color: #4c2da5;
 }
 
+.search__submit:disabled {
+  cursor: none;
+  background-color: #372177;
+}
+
 @media (max-width: 540px) {
   .search__submit {
     background-size: 20px 20px;
