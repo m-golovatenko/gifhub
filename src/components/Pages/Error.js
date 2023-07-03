@@ -1,5 +1,5 @@
 import React from 'react';
-import LinkElement from './LinkElement';
+import LinkElement from '../Elements/LinkElement';
 
 function Error() {
   return (

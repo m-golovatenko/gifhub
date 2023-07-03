@@ -1,14 +1,17 @@
 import React from 'react';
-import { useParams, useNavigate, useRef } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Form from '../Form/Form';
 import Gifs from '../Gifs/Gifs';
 import api from '../../utils/api';
-import NavBar from '../NavBar';
+import NavBar from '../Elements/NavBar';
+import SearchSuggestions from '../Elements/SearchSuggestions';
 
 function Main({ searchGifs, setSearchGifs }) {
   const [pagination, setPagination] = React.useState(0);
   const [searchQuery, setSearchQuery] = React.useState('');
   const [isSubmitted, setIsSubmitted] = React.useState(false);
+  const [isFailed, setIsFailed] = React.useState(false);
+  const [suggestions, setSuggestions] = React.useState([]);
 
   const searchInputRef = React.useRef();
   let { page } = useParams();
@@ -24,10 +27,12 @@ function Main({ searchGifs, setSearchGifs }) {
           setPagination(data.pagination);
         })
         .catch(error => {
+          setIsFailed(true);
           console.error(error);
         });
       setIsSubmitted(false);
     }
+    // eslint-disable-next-line
   }, [searchQuery, isSubmitted]);
 
   React.useEffect(() => {
@@ -38,8 +43,10 @@ function Main({ searchGifs, setSearchGifs }) {
         setPagination(data.pagination);
       })
       .catch(error => {
+        setIsFailed(true);
         console.error(error);
       });
+    // eslint-disable-next-line
   }, [page]);
 
   function handleSubmit({ e }) {
@@ -50,6 +57,7 @@ function Main({ searchGifs, setSearchGifs }) {
 
   function handleClear() {
     setSearchQuery('');
+    setIsFailed(false);
     searchInputRef.current.focus();
   }
 
