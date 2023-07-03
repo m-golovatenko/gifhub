@@ -11,6 +11,7 @@
 /*MAIN*/
 @import url(./blocks/container/container.css);
 @import url(./blocks/search-page-text/search-page-text.css);
+@import url(./blocks/search-page-text/_none/search-page-text_none.css);
 /*SEARCH*/
 @import url(./blocks/search/search.css);
 @import url(./blocks/search/__bar/search__bar.css);

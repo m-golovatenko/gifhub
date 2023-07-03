@@ -64,9 +64,9 @@ function Main({ searchGifs, setSearchGifs }) {
         searchInputRef={searchInputRef}
       />
 
-      {/*isSubmitted && (
-        <p className="search-page-text">Ой... Здесь пока пусто. Найди гифки по поиску</p>
-      )*/}
+      <p className={searchGifs.length === 0 ? 'search-page-text' : 'search-page-text_none'}>
+        Ой... Здесь пока пусто. Найди гифки по поиску
+      </p>
 
       {searchGifs.length !== 0 && <Gifs gifs={searchGifs} pagination={pagination} type="search" />}
     </>

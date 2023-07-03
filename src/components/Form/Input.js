@@ -5,11 +5,11 @@ function Input({ placeholder, value, searchInputRef }) {
 
   React.useEffect(() => {
     setSearchQuery(value);
-  }, [value])
+  }, [value]);
 
   function validate(value) {
-    if(value.length > 50) return
-    return setSearchQuery(value)
+    if (value.length > 50) return;
+    return setSearchQuery(value);
   }
 
   return (
@@ -19,7 +19,7 @@ function Input({ placeholder, value, searchInputRef }) {
       placeholder={placeholder}
       type="text"
       value={searchQuery}
-      onChange={e=>validate(e.target.value)}
+      onChange={e => validate(e.target.value)}
     />
   );
 }

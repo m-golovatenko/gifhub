@@ -13,6 +13,5 @@
   .random-gif {
     width: calc(100% + 24px);
     margin-left: -12px;
-    margin-bottom: 54px;
   }
 }
