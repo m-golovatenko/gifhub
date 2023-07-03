@@ -53,6 +53,14 @@ class Api {
       })}`
     ).then(this._getResponseData);
   }
+
+  getSuggestions() {
+    return fetch(
+      `https://api.giphy.com/v1/trending/searches?${new URLSearchParams({
+        api_key: this.api_key
+      })}`
+    ).then(this._getResponseData);
+  }
 }
 
 const api = new Api({ baseUrl, api_key });

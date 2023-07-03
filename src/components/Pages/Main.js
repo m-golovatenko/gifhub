@@ -42,7 +42,7 @@ function Main({ searchGifs, setSearchGifs }) {
       });
   }, [page]);
 
-  function handleSubmit(e) {
+  function handleSubmit({ e }) {
     e.preventDefault();
     setSearchQuery(searchInputRef.current.value);
     setIsSubmitted(true);
@@ -64,9 +64,20 @@ function Main({ searchGifs, setSearchGifs }) {
         searchInputRef={searchInputRef}
       />
 
-      {/*isSubmitted && (
-        <p className="search-page-text">Ой... Здесь пока пусто. Найди гифки по поиску</p>
-      )*/}
+      {searchGifs.length === 0 && (
+        <SearchSuggestions
+          suggestions={suggestions}
+          setSuggestions={setSuggestions}
+          setSearchQuery={setSearchQuery}
+          setIsSubmitted={setIsSubmitted}
+        />
+      )}
+
+      <p className={searchGifs.length === 0 ? 'search-page-text' : 'search-page-text_none'}>
+        {isFailed
+          ? 'Ой, что-то не так (×_×) '
+          : 'Здесь пока пусто. Найди гифки по поиску (.❛ ᴗ ❛.) '}
+      </p>
 
       {searchGifs.length !== 0 && <Gifs gifs={searchGifs} pagination={pagination} type="search" />}
     </>
