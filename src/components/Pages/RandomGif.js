@@ -51,13 +51,13 @@ function RandomGif({ setIsLoading, isLoading }) {
   return (
     <>
       <NavBar />
+      <Button buttonText={textValue} handleClick={handleClick} />
       <div className="random-gif">
         {isLoading ? (
           <Loader />
         ) : (
           <img src={randomGif.url} alt={randomGif.title} className="random-gif__gif" />
         )}
-        <Button buttonText={textValue} handleClick={handleClick} />
       </div>
     </>
   );
