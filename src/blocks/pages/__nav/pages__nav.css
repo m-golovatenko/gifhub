@@ -2,7 +2,7 @@
   border: none;
   text-decoration: none;
   text-align: center;
-  width: 100px;
+
   padding: 8px 12px;
   border-radius: 8px;
   background: #633ad6;
@@ -15,4 +15,10 @@
 .pages__nav:hover {
   cursor: pointer;
   background: #4c2da5;
+}
+
+@media (max-width: 540px) {
+  .pages__nav {
+    color: #fff;
+  }
 }

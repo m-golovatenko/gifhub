@@ -7,14 +7,14 @@
   gap: 16px;
   margin: 0 auto;
 }
-@media (max-width: 930px) {
+@media (max-width: 970px) {
   .gifs {
     grid-template-columns: repeat(2, 296px);
     justify-content: center;
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 660px) {
   .gifs {
     grid-template-columns: repeat(1, 296px);
     gap: 16px;

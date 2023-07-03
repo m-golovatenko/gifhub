@@ -5,3 +5,10 @@
   display: flex;
   gap: 4px;
 }
+
+@media (max-width: 540px) {
+  .pages__list {
+    justify-content: space-between;
+    width: 100%;
+  }
+}

@@ -28,13 +28,12 @@ function Pagination({ pagination, type }) {
 
   return (
     <div className="pages">
+      {page > 3 && (
+        <Link to={`/${type}/1`} className="pages__nav">
+          В начало
+        </Link>
+      )}
       <ul className="pages__list">
-        {page > 3 && (
-          <Link to={`/${type}/1`} className="pages__nav">
-            В начало
-          </Link>
-        )}
-
         {getPaginationList().map((page, i) => {
           return (
             <li key={i}>
@@ -49,14 +48,12 @@ function Pagination({ pagination, type }) {
             </li>
           );
         })}
-
-        { page < totalCountPage && (
-          <Link to={`/${type}/${+page + 1}`} className="pages__nav">
-            Вперед
-          </Link>
-        )}
-
       </ul>
+      {page < totalCountPage && (
+        <Link to={`/${type}/${+page + 1}`} className="pages__nav">
+          Вперед
+        </Link>
+      )}
     </div>
   );
 }

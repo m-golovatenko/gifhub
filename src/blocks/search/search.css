@@ -1,9 +1,15 @@
 .search {
-  margin: 0 auto;
-  width: 920px;
+  margin: -8px auto 0;
+  width: 100%;
   height: 56px;
   border-radius: 8px;
   border: 1px solid #eeeff2;
   display: flex;
   position: relative;
+}
+
+@media (max-width: 540px) {
+  .search {
+    height: 44px;
+  }
 }

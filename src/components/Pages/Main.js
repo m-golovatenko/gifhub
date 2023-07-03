@@ -57,18 +57,14 @@ function Main({ searchGifs, setSearchGifs }) {
     <>
       <NavBar />
 
-      <div className="container">
-        <Form
-          handleSubmit={handleSubmit}
-          searchQuery={searchQuery}
-          handleClear={handleClear}
-          searchInputRef={searchInputRef}
-        />
+      <Form
+        handleSubmit={handleSubmit}
+        searchQuery={searchQuery}
+        handleClear={handleClear}
+        searchInputRef={searchInputRef}
+      />
 
-        {searchGifs.length !== 0 && (
-          <Gifs gifs={searchGifs} pagination={pagination} type="search" />
-        )}
-      </div>
+      {searchGifs.length !== 0 && <Gifs gifs={searchGifs} pagination={pagination} type="search" />}
     </>
   );
 }
