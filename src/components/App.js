@@ -6,7 +6,7 @@ import Footer from './Footer';
 import Trending from './Pages/Trending';
 import RandomGif from './Pages/RandomGif';
 import Error from './Pages/Error';
-import GifPage from './Gifs/GifPage';
+import GifPage from './Pages/GifPage';
 
 function App() {
   const [trendingGifs, setTrendingGifs] = React.useState([]);
