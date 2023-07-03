@@ -13,11 +13,11 @@ function GifPage({ gifs }) {
   const gif = getGifById(gifs, id);
 
   return (
-    <div className="gif__page">
+    <div className="gif-page">
       {gif ? (
         <>
-          <h2 className="gif__title">{gif.title}</h2>
-          <img className="gif__gif" src={gif.src} alt={gif.title} />
+          <h2 className="gif-page__title">{gif.title}</h2>
+          <img className="gif-page__gif" src={gif.src} alt={gif.title} />
           <LinkElement path={'/search'} linkText="На главную" />
         </>
       ) : (
