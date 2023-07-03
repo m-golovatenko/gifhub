@@ -42,9 +42,9 @@ function App() {
             element={<RandomGif isLoading={isLoading} setIsLoading={setIsLoading} />}
           />
 
-          <Route path="/trending/:id" element={<GifPage gifs={trendingGifs} />} />
+          <Route path="/trending/gifs/:id" element={<GifPage gifs={trendingGifs} />} />
 
-          <Route path="/search/:id" element={<GifPage gifs={searchGifs} />} />
+          <Route path="/search/gifs/:id" element={<GifPage gifs={searchGifs} />} />
 
           <Route path="/" element={<Navigate to="/search/1" replace />} />
 
