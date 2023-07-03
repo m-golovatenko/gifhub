@@ -4,12 +4,14 @@ import Form from '../Form/Form';
 import Gifs from '../Gifs/Gifs';
 import api from '../../utils/api';
 import NavBar from '../Elements/NavBar';
+import SearchSuggestions from '../Elements/SearchSuggestions';
 
 function Main({ searchGifs, setSearchGifs }) {
   const [pagination, setPagination] = React.useState(0);
   const [searchQuery, setSearchQuery] = React.useState('');
   const [isSubmitted, setIsSubmitted] = React.useState(false);
   const [isFailed, setIsFailed] = React.useState(false);
+  const [suggestions, setSuggestions] = React.useState([]);
 
   const searchInputRef = React.useRef();
   let { page } = useParams();
@@ -47,7 +49,7 @@ function Main({ searchGifs, setSearchGifs }) {
     // eslint-disable-next-line
   }, [page]);
 
-  function handleSubmit(e) {
+  function handleSubmit({ e }) {
     e.preventDefault();
     setSearchQuery(searchInputRef.current.value);
     setIsSubmitted(true);
@@ -69,6 +71,15 @@ function Main({ searchGifs, setSearchGifs }) {
         handleClear={handleClear}
         searchInputRef={searchInputRef}
       />
+
+      {searchGifs.length === 0 && (
+        <SearchSuggestions
+          suggestions={suggestions}
+          setSuggestions={setSuggestions}
+          setSearchQuery={setSearchQuery}
+          setIsSubmitted={setIsSubmitted}
+        />
+      )}
 
       <p className={searchGifs.length === 0 ? 'search-page-text' : 'search-page-text_none'}>
         {isFailed
