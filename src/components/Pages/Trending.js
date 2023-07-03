@@ -20,7 +20,7 @@ function Trending({ trendingGifs, setTrendingGifs }) {
       });
   }, [page]);
 
-  return <Gifs gifs={trendingGifs} pagination={pagination} />;
+  return <Gifs gifs={trendingGifs} pagination={pagination} type="trending" />;
 }
 
 export default Trending;

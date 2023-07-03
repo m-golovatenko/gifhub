@@ -1,15 +1,20 @@
 import React from 'react';
 
-function Input({ placeholder, handleChange, value }) {
+function Input({ placeholder, value, searchInputRef }) {
+  const [searchQuery, setSearchQuery] = React.useState('');
+
+  React.useEffect(() => {
+    setSearchQuery(value);
+  }, [value])
+
   return (
     <input
+      ref={searchInputRef}
       className="search__bar"
       placeholder={placeholder}
       type="text"
-      onChange={e => {
-        handleChange(e.target.value);
-      }}
-      value={value || ''}
+      value={searchQuery}
+      onChange={e=>setSearchQuery(e.target.value)}
     />
   );
 }
