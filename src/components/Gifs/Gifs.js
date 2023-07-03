@@ -6,7 +6,13 @@ function Gifs({ gifs, pagination, type }) {
     <>
       <ul className="gifs">
         {gifs.map(gif => (
-          <Gif key={gif.id} gifUrl={gif.images.original.url} title={gif.title} type={type} />
+          <Gif
+            id={gif.id}
+            key={gif.id}
+            gifUrl={gif.images.original.url}
+            title={gif.title}
+            type={type}
+          />
         ))}
       </ul>
 
