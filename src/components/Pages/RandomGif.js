@@ -7,7 +7,7 @@ import Loader from '../Loader';
 function RandomGif({ setIsLoading, isLoading }) {
   const [randomGif, setRandomGif] = React.useState([]);
 
-  React.useEffect(() => {
+  function getRandomGif() {
     setIsLoading(true);
 
     api
@@ -18,10 +18,20 @@ function RandomGif({ setIsLoading, isLoading }) {
       })
 
       .catch(e => console.error(`Ошибка при рендере рандомной гифки. Код ошибки: ${e}`))
+
       .finally(() => {
         setIsLoading(false);
       });
-  }, [setRandomGif, setIsLoading]);
+  }
+
+  const handleClick = () => {
+    getRandomGif();
+  };
+
+  React.useEffect(() => {
+    getRandomGif();
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <>
@@ -32,7 +42,7 @@ function RandomGif({ setIsLoading, isLoading }) {
         ) : (
           <img src={randomGif.url} alt={randomGif.title} className="random-gif__gif" />
         )}
-        <Button buttonText={'Следующая'} />
+        <Button buttonText={'Попытать удачу'} handleClick={handleClick} />
       </div>
     </>
   );

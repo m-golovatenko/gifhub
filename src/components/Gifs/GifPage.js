@@ -7,12 +7,9 @@ function GifPage({ gifs }) {
   const { id } = useParams();
   const gif = getGifById(gifs, id);
 
-  console.log('here', gifs, id,gif);
   function getGifById(gifs, id) {
     return gifs.find(gif => gif.id === id);
   }
-
-  
 
   return (
     <div className="gif-page">

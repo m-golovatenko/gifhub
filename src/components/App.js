@@ -13,8 +13,6 @@ function App() {
   const [searchGifs, setSearchGifs] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(false);
 
-  console.log('trendingGifs', trendingGifs);
-
   return (
     <div className="page">
       <Header />

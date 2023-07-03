@@ -20,7 +20,6 @@ function Trending({ trendingGifs, setTrendingGifs, setIsLoading, isLoading }) {
       })
       .catch(error => {
         console.error(error);
-        console.log('here');
       })
       .finally(() => {
         setIsLoading(false);
