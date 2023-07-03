@@ -15,7 +15,7 @@ function GifPage({ gifs }) {
     <div className="gif-page">
       {gif ? (
         <>
-          <h2 className="gif-page__title">{gif.title}</h2>
+          <h1 className="gif-page__title">{gif.title}</h1>
           <img className="gif-page__gif" src={gif.images.original.url} alt={gif.title} />
           <LinkElement path={'/search/1'} linkText="На главную" />
         </>

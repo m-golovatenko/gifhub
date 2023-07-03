@@ -9,6 +9,7 @@ function Main({ searchGifs, setSearchGifs }) {
   const [pagination, setPagination] = React.useState(0);
   const [searchQuery, setSearchQuery] = React.useState('');
   const [isSubmitted, setIsSubmitted] = React.useState(false);
+  const [isFailed, setIsFailed] = React.useState(false);
 
   const searchInputRef = React.useRef();
   let { page } = useParams();
@@ -24,6 +25,7 @@ function Main({ searchGifs, setSearchGifs }) {
           setPagination(data.pagination);
         })
         .catch(error => {
+          setIsFailed(true);
           console.error(error);
         });
       setIsSubmitted(false);
@@ -39,6 +41,7 @@ function Main({ searchGifs, setSearchGifs }) {
         setPagination(data.pagination);
       })
       .catch(error => {
+        setIsFailed(true);
         console.error(error);
       });
     // eslint-disable-next-line
@@ -52,6 +55,7 @@ function Main({ searchGifs, setSearchGifs }) {
 
   function handleClear() {
     setSearchQuery('');
+    setIsFailed(false);
     searchInputRef.current.focus();
   }
 
@@ -67,7 +71,9 @@ function Main({ searchGifs, setSearchGifs }) {
       />
 
       <p className={searchGifs.length === 0 ? 'search-page-text' : 'search-page-text_none'}>
-        Ой... Здесь пока пусто. Найди гифки по поиску
+        {isFailed
+          ? 'Ой, что-то не так (×_×) '
+          : 'Здесь пока пусто. Найди гифки по поиску (.❛ ᴗ ❛.) '}
       </p>
 
       {searchGifs.length !== 0 && <Gifs gifs={searchGifs} pagination={pagination} type="search" />}

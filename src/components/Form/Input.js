@@ -19,7 +19,10 @@ function Input({ placeholder, value, searchInputRef }) {
       placeholder={placeholder}
       type="text"
       value={searchQuery}
-      onChange={e => validate(e.target.value)}
+      onChange={e => {
+        setSearchQuery(e.target.value);
+        validate(e.target.value);
+      }}
     />
   );
 }
