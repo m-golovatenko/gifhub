@@ -25,7 +25,7 @@ function Trending({ trendingGifs, setTrendingGifs, setIsLoading, isLoading }) {
       .finally(() => {
         setIsLoading(false);
       });
-  }, [page]);
+  }, [page, setIsLoading, setTrendingGifs]);
 
   return (
     <>

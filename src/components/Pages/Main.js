@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, useNavigate, useRef } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Form from '../Form/Form';
 import Gifs from '../Gifs/Gifs';
 import api from '../../utils/api';
@@ -28,6 +28,7 @@ function Main({ searchGifs, setSearchGifs }) {
         });
       setIsSubmitted(false);
     }
+    // eslint-disable-next-line
   }, [searchQuery, isSubmitted]);
 
   React.useEffect(() => {
@@ -40,6 +41,7 @@ function Main({ searchGifs, setSearchGifs }) {
       .catch(error => {
         console.error(error);
       });
+    // eslint-disable-next-line
   }, [page]);
 
   function handleSubmit(e) {

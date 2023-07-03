@@ -21,7 +21,7 @@ function RandomGif({ setIsLoading, isLoading }) {
       .finally(() => {
         setIsLoading(false);
       });
-  }, [setRandomGif]);
+  }, [setRandomGif, setIsLoading]);
 
   return (
     <>
