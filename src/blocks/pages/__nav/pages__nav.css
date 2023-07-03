@@ -1,8 +1,9 @@
 .pages__nav {
   border: none;
   text-decoration: none;
+  box-sizing: border-box;
   text-align: center;
-
+  width: 100px;
   padding: 8px 12px;
   border-radius: 8px;
   background: #633ad6;
@@ -19,6 +20,7 @@
 
 @media (max-width: 540px) {
   .pages__nav {
+    width: 100%;
     color: #fff;
   }
 }
