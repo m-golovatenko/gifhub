@@ -7,6 +7,11 @@ function Input({ placeholder, value, searchInputRef }) {
     setSearchQuery(value);
   }, [value])
 
+  function validate(value) {
+    if(value.length > 50) return
+    return setSearchQuery(value)
+  }
+
   return (
     <input
       ref={searchInputRef}
@@ -14,7 +19,7 @@ function Input({ placeholder, value, searchInputRef }) {
       placeholder={placeholder}
       type="text"
       value={searchQuery}
-      onChange={e=>setSearchQuery(e.target.value)}
+      onChange={e=>validate(e.target.value)}
     />
   );
 }
