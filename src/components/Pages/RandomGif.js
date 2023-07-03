@@ -6,7 +6,7 @@ import Loader from '../Loader';
 
 function RandomGif({ setIsLoading, isLoading }) {
   const [randomGif, setRandomGif] = React.useState([]);
-  const [textValue, setTextValue] = React.useState('Испытать удачу');
+  const [textValue, setTextValue] = React.useState('Испытать удачу 🤞');
 
   const randomText = [
     { text: 'Поехали 🚘', key: 1 },
