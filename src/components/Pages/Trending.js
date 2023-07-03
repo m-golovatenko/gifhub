@@ -2,8 +2,8 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import Gifs from '../Gifs/Gifs';
 import api from '../../utils/api';
-import NavBar from '../NavBar';
-import Loader from '../Loader';
+import NavBar from '../Elements/NavBar';
+import Loader from '../Elements/Loader';
 
 function Trending({ trendingGifs, setTrendingGifs, setIsLoading, isLoading }) {
   const [pagination, setPagination] = React.useState(0);

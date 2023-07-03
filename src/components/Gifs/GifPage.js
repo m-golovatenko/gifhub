@@ -1,6 +1,6 @@
 import React from 'react';
-import LinkElement from '../LinkElement';
-import Error from '../Error';
+import LinkElement from '../Elements/LinkElement';
+import Error from '../Pages/Error';
 import { useParams } from 'react-router-dom';
 
 function GifPage({ gifs }) {

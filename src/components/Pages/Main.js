@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Form from '../Form/Form';
 import Gifs from '../Gifs/Gifs';
 import api from '../../utils/api';
-import NavBar from '../NavBar';
+import NavBar from '../Elements/NavBar';
 
 function Main({ searchGifs, setSearchGifs }) {
   const [pagination, setPagination] = React.useState(0);

@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from '../Button';
+import Button from '../Elements/Button';
 import api from '../../utils/api';
-import NavBar from '../NavBar';
-import Loader from '../Loader';
+import NavBar from '../Elements/NavBar';
+import Loader from '../Elements/Loader';
 
 function RandomGif({ setIsLoading, isLoading }) {
   const [randomGif, setRandomGif] = React.useState([]);

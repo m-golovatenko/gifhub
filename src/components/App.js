@@ -5,7 +5,7 @@ import Main from './Pages/Main';
 import Footer from './Footer';
 import Trending from './Pages/Trending';
 import RandomGif from './Pages/RandomGif';
-import Error from './Error';
+import Error from './Pages/Error';
 import GifPage from './Gifs/GifPage';
 
 function App() {
