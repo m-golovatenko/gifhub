@@ -3,6 +3,7 @@ import { useParams, useNavigate, useRef } from 'react-router-dom';
 import Form from '../Form/Form';
 import Gifs from '../Gifs/Gifs';
 import api from '../../utils/api';
+import NavBar from '../NavBar';
 
 function Main({ searchGifs, setSearchGifs }) {
   const [pagination, setPagination] = React.useState(0);
@@ -15,7 +16,7 @@ function Main({ searchGifs, setSearchGifs }) {
 
   React.useEffect(() => {
     if (isSubmitted) {
-      navigate('/search/1', {replace: true});
+      navigate('/search/1', { replace: true });
       api
         .getSearchGifs(searchQuery, page)
         .then(data => {
@@ -53,16 +54,22 @@ function Main({ searchGifs, setSearchGifs }) {
   }
 
   return (
-    <div className="container">
-      <Form
-        handleSubmit={handleSubmit}
-        searchQuery={searchQuery}
-        handleClear={handleClear}
-        searchInputRef={searchInputRef}
-      />
+    <>
+      <NavBar />
 
-      {searchGifs.length !== 0 && <Gifs gifs={searchGifs} pagination={pagination} type="search" />}
-    </div>
+      <div className="container">
+        <Form
+          handleSubmit={handleSubmit}
+          searchQuery={searchQuery}
+          handleClear={handleClear}
+          searchInputRef={searchInputRef}
+        />
+
+        {searchGifs.length !== 0 && (
+          <Gifs gifs={searchGifs} pagination={pagination} type="search" />
+        )}
+      </div>
+    </>
   );
 }
 

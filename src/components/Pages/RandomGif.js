@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../Button';
 import api from '../../utils/api';
+import NavBar from '../NavBar';
 
 function RandomGif() {
   const [randomGif, setRandomGif] = React.useState([]);
@@ -15,10 +16,13 @@ function RandomGif() {
   }, [setRandomGif]);
 
   return (
-    <div className="random-gif">
-      <img src={randomGif.url} alt={randomGif.title} className="random-gif__gif" />
-      <Button buttonText={'Следующая'} />
-    </div>
+    <>
+      <NavBar />
+      <div className="random-gif">
+        <img src={randomGif.url} alt={randomGif.title} className="random-gif__gif" />
+        <Button buttonText={'Следующая'} />
+      </div>
+    </>
   );
 }
 

@@ -2,8 +2,9 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import Gifs from '../Gifs/Gifs';
 import api from '../../utils/api';
+import NavBar from '../NavBar';
 
-function Trending({ trendingGifs, setTrendingGifs }) {
+function Trending({ trendingGifs, setTrendingGifs, path }) {
   const [pagination, setPagination] = React.useState(0);
   let { page } = useParams();
 
@@ -20,7 +21,12 @@ function Trending({ trendingGifs, setTrendingGifs }) {
       });
   }, [page]);
 
-  return <Gifs gifs={trendingGifs} pagination={pagination} type="trending" />;
+  return (
+    <>
+      <NavBar />
+      <Gifs gifs={trendingGifs} pagination={pagination} type="trending" />
+    </>
+  );
 }
 
 export default Trending;

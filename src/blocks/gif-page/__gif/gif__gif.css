@@ -1,0 +1,7 @@
+.gif__gif {
+  display: block;
+  width: 920px;
+  height: 600px;
+  object-fit: contain;
+  object-position: center;
+}

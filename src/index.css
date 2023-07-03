@@ -20,6 +20,10 @@
 @import url(./blocks/gifs/__item/gifs__item.css);
 @import url(./blocks/gifs/__image/gifs__image.css);
 @import url(./blocks/gifs/__title/gifs__title.css);
+/*GIF PAGE*/
+@import url(./blocks/gif-page/gif__page.css);
+@import url(./blocks/gif-page/__title/gif__title.css);
+@import url(./blocks/gif-page/__gif/gif__gif.css);
 /*PAGES*/
 @import url(./blocks/pages/pages.css);
 @import url(./blocks/pages/__nav/pages__nav.css);
@@ -36,6 +40,7 @@
 /*ADDITIONAL*/
 @import url(./blocks/button/button.css);
 @import url(./blocks/link/link.css);
+@import url(./blocks/loader/loader.css);
 /*ERROR*/
 @import url(./blocks/error/error.css);
 @import url(./blocks/error/__code/error__code.css);

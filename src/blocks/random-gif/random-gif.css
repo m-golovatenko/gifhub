@@ -6,6 +6,7 @@
   gap: 24px;
   align-items: center;
   border-radius: 8px;
+  min-height: 55vh;
 }
 
 @media (max-width: 540px) {

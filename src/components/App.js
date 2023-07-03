@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="page">
       <Header />
-      
+
       <main className="container">
         <Routes>
           <Route
@@ -30,10 +30,11 @@ function App() {
 
           <Route path="/random-gif" element={<RandomGif />} />
 
-          <Route path="/search/:id" element={<GifPage />} />
-          <Route path="/trending/:id" element={<GifPage />} />
+          <Route path="/trending/:id" element={<GifPage gifs={trendingGifs} />} />
 
-          <Route path="/" element={<Navigate to="/search/1" replace /> }/>
+          <Route path="/search/:id" element={<GifPage gifs={searchGifs} />} />
+
+          <Route path="/" element={<Navigate to="/search/1" replace />} />
 
           <Route path="*" element={<Error />} />
         </Routes>

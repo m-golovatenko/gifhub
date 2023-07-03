@@ -1,0 +1,6 @@
+.gif__page {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  gap: 24px;
+}
