@@ -49,7 +49,7 @@ function Main({ searchGifs, setSearchGifs }) {
     // eslint-disable-next-line
   }, [page]);
 
-  function handleSubmit({ e }) {
+  function handleSubmit(e) {
     e.preventDefault();
     setSearchQuery(searchInputRef.current.value);
     setIsSubmitted(true);
