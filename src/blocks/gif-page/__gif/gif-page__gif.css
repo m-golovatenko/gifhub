@@ -1,14 +1,7 @@
 .gif-page__gif {
   display: block;
-  width: 100%;
-  max-height: 600px;
+  width: 920px;
+  height: 600px;
   object-fit: contain;
   object-position: center;
-}
-
-@media (max-width: 540px) {
-  .gif-page__gif {
-    width: calc(100% + 24px);
-    margin-left: -12px;
-  }
 }

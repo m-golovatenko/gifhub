@@ -2,8 +2,8 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import Gifs from '../Gifs/Gifs';
 import api from '../../utils/api';
-import NavBar from '../Elements/NavBar';
-import Loader from '../Elements/Loader';
+import NavBar from '../NavBar';
+import Loader from '../Loader';
 
 function Trending({ trendingGifs, setTrendingGifs, setIsLoading, isLoading }) {
   const [pagination, setPagination] = React.useState(0);
@@ -20,11 +20,12 @@ function Trending({ trendingGifs, setTrendingGifs, setIsLoading, isLoading }) {
       })
       .catch(error => {
         console.error(error);
+        console.log('here');
       })
       .finally(() => {
         setIsLoading(false);
       });
-  }, [page, setIsLoading, setTrendingGifs]);
+  }, [page]);
 
   return (
     <>

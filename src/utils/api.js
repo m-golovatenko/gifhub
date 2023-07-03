@@ -38,6 +38,14 @@ class Api {
     ).then(this._getResponseData);
   }
 
+  getGifById(id) {
+    return fetch(
+      `${this._baseUrl}/${id}?${new URLSearchParams({
+        api_key: this.api_key
+      })}`
+    ).then(this._getResponseData);
+  }
+
   getRandomGif() {
     return fetch(
       `${this._baseUrl}/random?${new URLSearchParams({

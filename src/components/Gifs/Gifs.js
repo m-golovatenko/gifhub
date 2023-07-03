@@ -1,4 +1,4 @@
-import Pagination from '../Elements/Pagination';
+import Pagination from '../Pagination';
 import Gif from './Gif';
 
 function Gifs({ gifs, pagination, type }) {

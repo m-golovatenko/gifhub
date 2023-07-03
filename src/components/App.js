@@ -5,14 +5,15 @@ import Main from './Pages/Main';
 import Footer from './Footer';
 import Trending from './Pages/Trending';
 import RandomGif from './Pages/RandomGif';
-import Error from './Pages/Error';
-import GifPage from './Pages/GifPage';
+import Error from './Error';
+import GifPage from './Gifs/GifPage';
+import Loader from './Loader';
 
 function App() {
   const [trendingGifs, setTrendingGifs] = React.useState([]);
   const [searchGifs, setSearchGifs] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(false);
-
+  
   return (
     <div className="page">
       <Header />

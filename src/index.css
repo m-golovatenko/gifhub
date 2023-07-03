@@ -11,7 +11,6 @@
 /*MAIN*/
 @import url(./blocks/container/container.css);
 @import url(./blocks/search-page-text/search-page-text.css);
-@import url(./blocks/search-page-text/_none/search-page-text_none.css);
 /*SEARCH*/
 @import url(./blocks/search/search.css);
 @import url(./blocks/search/__bar/search__bar.css);
@@ -22,7 +21,6 @@
 @import url(./blocks/gifs/__item/gifs__item.css);
 @import url(./blocks/gifs/__image/gifs__image.css);
 @import url(./blocks/gifs/__title/gifs__title.css);
-@import url(./blocks/gifs/__title-text/gifs__title-text.css);
 /*GIF PAGE*/
 @import url(./blocks/gif-page/gif-page.css);
 @import url(./blocks/gif-page/__title/gif-page__title.css);
