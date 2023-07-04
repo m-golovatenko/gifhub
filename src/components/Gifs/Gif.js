@@ -6,7 +6,9 @@ function Gif({ gifUrl, title, type, id }) {
     <li>
       <Link to={`/${type}/gifs/${id}`} className="gifs__item">
         <img className="gifs__image" src={gifUrl} alt={title} />
-        <p className="gifs__title">{title}</p>
+        <div className="gifs__title">
+          <p className="gifs__title-text">{title}</p>
+        </div>
       </Link>
     </li>
   );

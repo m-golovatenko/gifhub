@@ -6,22 +6,22 @@ import api from '../../utils/api';
 import NavBar from '../Elements/NavBar';
 import SearchSuggestions from '../Elements/SearchSuggestions';
 
-function Main({ searchGifs, setSearchGifs }) {
-  const [pagination, setPagination] = React.useState(0);
+function Main({ searchGifs = [], setSearchGifs }) {
+  const searchInputRef = React.useRef();
+  let { page } = useParams();
+  let { query } = useParams();
+  const navigate = useNavigate();
+
+ const [pagination, setPagination] = React.useState(0);
   const [searchQuery, setSearchQuery] = React.useState('');
   const [isSubmitted, setIsSubmitted] = React.useState(false);
   const [isFailed, setIsFailed] = React.useState(false);
-  const [suggestions, setSuggestions] = React.useState([]);
-
-  const searchInputRef = React.useRef();
-  let { page } = useParams();
-  const navigate = useNavigate();
 
   React.useEffect(() => {
     if (isSubmitted) {
-      navigate('/search/1', { replace: true });
+      navigate(`/search/${searchQuery}/1`, { replace: true });
       api
-        .getSearchGifs(searchQuery, page)
+        .getSearchGifs(query, page)
         .then(data => {
           setSearchGifs(data.data);
           setPagination(data.pagination);
@@ -37,7 +37,7 @@ function Main({ searchGifs, setSearchGifs }) {
 
   React.useEffect(() => {
     api
-      .getSearchGifs(searchQuery, page)
+      .getSearchGifs(query, page)
       .then(data => {
         setSearchGifs(data.data);
         setPagination(data.pagination);
@@ -47,7 +47,7 @@ function Main({ searchGifs, setSearchGifs }) {
         console.error(error);
       });
     // eslint-disable-next-line
-  }, [page]);
+  }, [page, query]);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -60,24 +60,23 @@ function Main({ searchGifs, setSearchGifs }) {
     setIsFailed(false);
     searchInputRef.current.focus();
   }
-
+  
   return (
     <>
       <NavBar />
 
       <Form
         handleSubmit={handleSubmit}
-        searchQuery={searchQuery}
+        value={searchQuery}
         handleClear={handleClear}
         searchInputRef={searchInputRef}
       />
 
       {searchGifs.length === 0 && (
         <SearchSuggestions
-          suggestions={suggestions}
-          setSuggestions={setSuggestions}
           setSearchQuery={setSearchQuery}
           setIsSubmitted={setIsSubmitted}
+          setIsFailed={setIsFailed}
         />
       )}
 

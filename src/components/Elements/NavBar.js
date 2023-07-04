@@ -7,7 +7,7 @@ function NavBar() {
       <ul className="nav">
         <li>
           <NavLink
-            to="/search/1"
+            to="/search"
             className={({ isActive }) => (isActive ? ' nav__link nav__link_active' : 'nav__link')}
           >
             Поиск

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Header() {
   return (
     <header className="header">
-      <Link to="/search/1" className="header__logo" aria-label="Логотип сайта." />
+      <Link to="/search" className="header__logo" aria-label="Логотип сайта." />
     </header>
   );
 }

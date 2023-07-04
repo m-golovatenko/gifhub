@@ -1,15 +1,10 @@
 import React from 'react';
 
-function Input({ placeholder, value, searchInputRef }) {
-  const [searchQuery, setSearchQuery] = React.useState('');
-
+function Input({ placeholder, value, searchInputRef, validate, searchQuery }) {
   React.useEffect(() => {
-    setSearchQuery(value);
+    validate(value);
+  // eslint-disable-next-line
   }, [value])
-
-  function validate(value) {
-    setSearchQuery(value.substr(0, Math.min(value.length, 50)));
-  }
 
   return (
     <input

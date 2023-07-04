@@ -1,7 +1,9 @@
 import React from 'react';
 import api from '../../utils/api';
 
-function SearchSuggestions({ setSuggestions, suggestions, setSearchQuery, setIsSubmitted }) {
+function SearchSuggestions({ setSearchQuery, setIsSubmitted, setIsFailed }) {
+  const [suggestions, setSuggestions] = React.useState([]);
+
   React.useEffect(() => {
     api
       .getSuggestions()

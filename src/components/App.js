@@ -20,7 +20,12 @@ function App() {
       <main className="container">
         <Routes>
           <Route
-            path="/search/:page"
+            path="/search"
+            element={<Main setSearchGifs={setSearchGifs} />}
+          />
+
+          <Route
+            path="/search/:query/:page"
             element={<Main searchGifs={searchGifs} setSearchGifs={setSearchGifs} />}
           />
 
@@ -45,7 +50,7 @@ function App() {
 
           <Route path="/search/gifs/:id" element={<GifPage gifs={searchGifs} />} />
 
-          <Route path="/" element={<Navigate to="/search/1" replace />} />
+          <Route path="/" element={<Navigate to="/search" replace />} />
 
           <Route path="*" element={<Error />} />
         </Routes>
