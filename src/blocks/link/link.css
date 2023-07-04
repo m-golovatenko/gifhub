@@ -4,7 +4,7 @@
   width: 240px;
   padding: 16px 24px;
   border: none;
-  background-color: #633ad6;
+  background-color: var(--accent-purple);
   color: #fff;
   font-size: 20px;
   font-weight: 400;
@@ -16,5 +16,5 @@
 
 .link:hover {
   cursor: pointer;
-  background-color: #4c2da5;
+  background-color: var(--accent-purple-dark);
 }

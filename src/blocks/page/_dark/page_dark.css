@@ -1,0 +1,15 @@
+.page_dark {
+  --main-bg-color: #232323;
+  --bg-color: #363636;
+  --footer-bg-color: #151617;
+
+  --primary-text: #fff;
+  --secondary-text: #b9b9b9;
+  --input-text: #000;
+  --inverted-text: #fff;
+  --logo-text: #fff;
+
+  --accent-purple: #633ad6;
+  --accent-purple-dark: #4c2da5;
+  --border: #484848;
+}

@@ -1,4 +1,4 @@
 .pages__item_active {
-  color: #fff;
-  background-color: #633ad6;
+  color: var(--inverted-text);
+  background-color: var(--accent-purple);
 }

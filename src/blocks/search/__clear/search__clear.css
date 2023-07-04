@@ -13,7 +13,7 @@
 
 .search__clear:hover {
   cursor: pointer;
-  color: #633ad6;
+  color: var(--accent-purple);
 }
 
 @media (max-width: 540px) {

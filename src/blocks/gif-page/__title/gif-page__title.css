@@ -1,7 +1,7 @@
 .gif-page__title {
   margin: 0;
   padding: 0;
-  color: #000;
+  color: var(--primary-text);
   text-align: center;
   font-size: 32px;
   font-weight: 700;

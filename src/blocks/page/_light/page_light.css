@@ -1,0 +1,14 @@
+.page_light {
+  --main-bg-color: #fff;
+  --bg-color: #eeeff2;
+  --footer-bg-color: #151617;
+
+  --primary-text: #000;
+  --secondary-text: #565656;
+  --input-text: #000;
+  --inverted-text: #fff;
+
+  --accent-purple: #633ad6;
+  --accent-purple-dark: #4c2da5;
+  --border: #d7d8da;
+}

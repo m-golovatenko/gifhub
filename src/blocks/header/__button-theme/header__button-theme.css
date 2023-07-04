@@ -1,0 +1,31 @@
+.header__button-theme {
+  box-sizing: border-box;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  border: 0;
+  padding: 10px;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 28px;
+}
+
+.header__button-theme:hover {
+  cursor: pointer;
+  background-color: var(--accent-purple);
+}
+
+@media (max-width: 540px) {
+  .header__button-theme {
+    width: 36px;
+    height: 36px;
+    top: 24px;
+    right: 12px;
+    background-size: 21px;
+    padding: 7.5px;
+  }
+}

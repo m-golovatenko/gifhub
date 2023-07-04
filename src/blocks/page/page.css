@@ -2,11 +2,13 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  color: #565656;
+  color: var(--secondary-text);
+  background-color: var(--main-bg-color);
   font-family: 'Roboto', Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: color 500ms linear, background-color 500ms linear, border-color 500ms linear;
 }

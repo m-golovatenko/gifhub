@@ -12,17 +12,23 @@ function App() {
   const [trendingGifs, setTrendingGifs] = React.useState([]);
   const [searchGifs, setSearchGifs] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(false);
+  const [darkTheme, setDarkTheme] = React.useState(false);
+
+  function handleClick() {
+    if (darkTheme) {
+      setDarkTheme(false);
+    } else {
+      setDarkTheme(true);
+    }
+  }
 
   return (
-    <div className="page">
-      <Header />
+    <div className={darkTheme ? 'page page_dark' : 'page page_light'}>
+      <Header isDark={darkTheme} handleClick={handleClick} />
 
       <main className="container">
         <Routes>
-          <Route
-            path="/search"
-            element={<Main setSearchGifs={setSearchGifs} />}
-          />
+          <Route path="/search" element={<Main setSearchGifs={setSearchGifs} />} />
 
           <Route
             path="/search/:query/:page"

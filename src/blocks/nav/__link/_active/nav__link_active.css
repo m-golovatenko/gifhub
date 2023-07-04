@@ -1,4 +1,4 @@
 .nav__link_active {
-  background-color: #eeeff2;
+  background-color: var(--bg-color);
   border-radius: 8px;
 }

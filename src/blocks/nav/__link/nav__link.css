@@ -5,7 +5,7 @@
   text-align: center;
   box-sizing: border-box;
   width: 141px;
-  color: #565656;
+  color: var(--secondary-text);
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;

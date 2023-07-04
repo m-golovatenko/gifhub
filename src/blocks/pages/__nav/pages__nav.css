@@ -6,8 +6,8 @@
   width: 100px;
   padding: 8px 12px;
   border-radius: 8px;
-  background: #633ad6;
-  color: #fff;
+  background: var(--accent-purple);
+  color: var(--inverted-text);
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -15,12 +15,12 @@
 
 .pages__nav:hover {
   cursor: pointer;
-  background: #4c2da5;
+  background: var(--accent-purple-dark);
 }
 
 @media (max-width: 540px) {
   .pages__nav {
     width: 100%;
-    color: #fff;
+    color: var(--inverted-text);
   }
 }

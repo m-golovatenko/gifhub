@@ -3,7 +3,7 @@
   width: 100%;
   height: 56px;
   border-radius: 8px;
-  border: 1px solid #eeeff2;
+  border: 1px solid var(--border);
   display: flex;
   position: relative;
 }

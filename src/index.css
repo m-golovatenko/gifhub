@@ -1,9 +1,15 @@
 @import url(./vendor/normalize.css);
 @import url(./vendor/fonts/fonts.css);
 @import url(./blocks/page/page.css);
+/*THEMES*/
+@import url(./blocks/page/_light/page_light.css);
+@import url(./blocks/page/_dark/page_dark.css);
 /*HEADER*/
 @import url(./blocks/header/header.css);
 @import url(./blocks/header/__logo/header__logo.css);
+@import url(./blocks/header/__button-theme/header__button-theme.css);
+@import url(./blocks/header/__button-theme/_light/header__button-theme_light.css);
+@import url(./blocks/header/__button-theme/_dark/header__button-theme_dark.css);
 /*NAV BAR*/
 @import url(./blocks/nav//nav.css);
 @import url(./blocks/nav/__link/nav__link.css);

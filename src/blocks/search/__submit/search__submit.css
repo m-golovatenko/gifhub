@@ -4,7 +4,8 @@
   width: 56px;
   height: 56px;
   border: none;
-  background: #633ad6 url(../../../images/search__submit.svg) no-repeat center / contain;
+  background: var(--accent-purple) url(../../../images/search__submit.svg) no-repeat center /
+    contain;
   border-radius: 0px 8px 8px 0px;
   background-size: 24px 24px;
   position: absolute;
@@ -14,7 +15,7 @@
 
 .search__submit:hover {
   cursor: pointer;
-  background-color: #4c2da5;
+  background-color: (--accent-purple-dark);
 }
 
 .search__submit:disabled {
