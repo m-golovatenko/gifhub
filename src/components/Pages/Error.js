@@ -10,7 +10,7 @@ function Error() {
           Ой... Здесь ничего нет. Зато на главной странице можно найти любую гифку
         </p>
       </div>
-      <LinkElement path={'/search/1'} linkText={'На главную'} />
+      <LinkElement path={'/search'} linkText={'На главную'} />
     </>
   );
 }
