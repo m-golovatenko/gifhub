@@ -1,7 +1,7 @@
 import Pagination from '../Elements/Pagination';
 import Gif from './Gif';
 
-function Gifs({ gifs, pagination, type }) {
+function Gifs({ gifs, pagination, type, setIsShow }) {
   return (
     <>
       <ul className="gifs">
@@ -16,7 +16,7 @@ function Gifs({ gifs, pagination, type }) {
         ))}
       </ul>
 
-      <Pagination pagination={pagination} type={type} />
+      <Pagination pagination={pagination} type={type} setIsShow={setIsShow} />
     </>
   );
 }

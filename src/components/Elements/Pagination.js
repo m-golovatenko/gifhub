@@ -1,10 +1,14 @@
 import { useParams, Link, NavLink } from 'react-router-dom';
 
-function Pagination({ pagination, type }) {
+function Pagination({ pagination, type, setIsShow }) {
   let { page } = useParams();
   let { query } = useParams();
 
   const totalCountPage = Math.floor(pagination.total_count / pagination.count);
+
+  function handleChangeShow() {
+    setIsShow(false);
+  }
 
   function getPaginationList() {
     const paginationList = [];
@@ -31,7 +35,11 @@ function Pagination({ pagination, type }) {
   return (
     <div className="pages">
       {page > 3 && (
-        <Link to={query ? `/${type}/${query}/1` : `/${type}/1`} className="pages__nav">
+        <Link 
+          to={query ? `/${type}/${query}/1` : `/${type}/1`} 
+          className="pages__nav"
+          onClick={handleChangeShow}
+        >
           В начало
         </Link>
       )}
@@ -41,6 +49,7 @@ function Pagination({ pagination, type }) {
             <li key={i}>
               <NavLink
                 to={query ? `/${type}/${query}/${page}` : `/${type}/${page}`}
+                onClick={handleChangeShow}
                 className={({ isActive }) =>
                   isActive ? ' pages__item pages__item_active' : 'pages__item'
                 }
@@ -54,6 +63,7 @@ function Pagination({ pagination, type }) {
       {page < totalCountPage && (
         <Link
           to={query ? `/${type}/${query}/${+page + 1}` : `/${type}/${+page + 1}`}
+          onClick={handleChangeShow}
           className="pages__nav"
         >
           Вперед

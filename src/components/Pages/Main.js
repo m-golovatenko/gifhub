@@ -5,13 +5,15 @@ import Gifs from '../Gifs/Gifs';
 import api from '../../utils/api';
 import NavBar from '../Elements/NavBar';
 import SearchSuggestions from '../Elements/SearchSuggestions';
+import Loader from '../Elements/Loader';
 
-function Main({ searchGifs = [], setSearchGifs }) {
+function Main({ searchGifs = [], setSearchGifs, setIsLoading, isLoading }) {
   const searchInputRef = React.useRef();
   let { page } = useParams();
   let { query } = useParams();
   const navigate = useNavigate();
 
+  const [isShow, setIsShow] = React.useState(false);
   const [pagination, setPagination] = React.useState(0);
   const [searchQuery, setSearchQuery] = React.useState('');
   const [isSubmitted, setIsSubmitted] = React.useState(false);
@@ -19,33 +21,33 @@ function Main({ searchGifs = [], setSearchGifs }) {
 
   React.useEffect(() => {
     if (isSubmitted) {
+      setIsShow(false);
       navigate(`/search/${searchQuery}/1`, { replace: true });
-      api
-        .getSearchGifs(query, page)
-        .then(data => {
-          setSearchGifs(data.data);
-          setPagination(data.pagination);
-        })
-        .catch(error => {
-          setIsFailed(true);
-          console.error(error);
-        });
-      setIsSubmitted(false);
     }
     // eslint-disable-next-line
   }, [searchQuery, isSubmitted]);
 
   React.useEffect(() => {
-    api
-      .getSearchGifs(query, page)
-      .then(data => {
-        setSearchGifs(data.data);
-        setPagination(data.pagination);
-      })
-      .catch(error => {
-        setIsFailed(true);
-        console.error(error);
-      });
+    if(page > 0) {
+      setIsShow(false);
+      setIsLoading(true);
+      api
+        .getSearchGifs(query, page)
+        .then(data => {
+          setSearchGifs(data.data);
+          setPagination(data.pagination);
+          setIsLoading(false);
+          setIsShow(true);
+          console.log('Меня меняет зависимость page');
+        })
+        .catch(error => {
+          setIsFailed(true);
+          console.error(error);
+        })
+        .finally(() => {
+          setIsLoading(false);
+        });
+    }
     // eslint-disable-next-line
   }, [page, query]);
 
@@ -86,7 +88,12 @@ function Main({ searchGifs = [], setSearchGifs }) {
           : 'Здесь пока пусто. Найди гифки по поиску (.❛ ᴗ ❛.) '}
       </p>
 
-      {searchGifs.length !== 0 && <Gifs gifs={searchGifs} pagination={pagination} type="search" />}
+      {isLoading ? (
+        <Loader />
+      ) : (
+        isShow && <Gifs gifs={searchGifs} pagination={pagination} type="search" setIsShow={setIsShow} />
+      )}
+
     </>
   );
 }

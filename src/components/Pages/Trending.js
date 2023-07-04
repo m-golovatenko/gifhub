@@ -7,8 +7,9 @@ import Loader from '../Elements/Loader';
 
 function Trending({ trendingGifs, setTrendingGifs, setIsLoading, isLoading }) {
   const [pagination, setPagination] = React.useState(0);
+  const [isShow, setIsShow] = React.useState(false);
   let { page } = useParams();
-
+  
   React.useEffect(() => {
     setIsLoading(true);
     api
@@ -17,10 +18,10 @@ function Trending({ trendingGifs, setTrendingGifs, setIsLoading, isLoading }) {
         setTrendingGifs(data.data);
         setPagination(data.pagination);
         setIsLoading(false);
+        setIsShow(true);
       })
       .catch(error => {
         console.error(error);
-        console.log('here');
       })
       .finally(() => {
         setIsLoading(false);
@@ -34,7 +35,7 @@ function Trending({ trendingGifs, setTrendingGifs, setIsLoading, isLoading }) {
       {isLoading ? (
         <Loader />
       ) : (
-        <Gifs gifs={trendingGifs} pagination={pagination} type="trending" />
+        isShow && <Gifs gifs={trendingGifs} pagination={pagination} type="trending" setIsShow={setIsShow} />
       )}
     </>
   );
