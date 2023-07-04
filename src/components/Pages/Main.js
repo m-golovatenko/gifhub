@@ -12,7 +12,7 @@ function Main({ searchGifs = [], setSearchGifs }) {
   let { query } = useParams();
   const navigate = useNavigate();
 
- const [pagination, setPagination] = React.useState(0);
+  const [pagination, setPagination] = React.useState(0);
   const [searchQuery, setSearchQuery] = React.useState('');
   const [isSubmitted, setIsSubmitted] = React.useState(false);
   const [isFailed, setIsFailed] = React.useState(false);
@@ -60,7 +60,7 @@ function Main({ searchGifs = [], setSearchGifs }) {
     setIsFailed(false);
     searchInputRef.current.focus();
   }
-  
+
   return (
     <>
       <NavBar />

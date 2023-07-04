@@ -10,20 +10,20 @@ function Form({ value, handleSubmit, handleClear, searchInputRef }) {
 
   return (
     <form className="search" onSubmit={handleSubmit}>
-      <Input 
-        placeholder={'Найти GIF...'} 
-        searchInputRef={searchInputRef} 
-        value={value} 
+      <Input
+        placeholder={'Найти GIF...'}
+        searchInputRef={searchInputRef}
+        value={value}
         validate={validate}
-        searchQuery={searchQuery} 
+        searchQuery={searchQuery}
       />
 
       {searchQuery && <button className="search__clear" onClick={handleClear} type="reset" />}
-      <button 
-        className="search__submit" 
-        type="submit" 
+      <button
+        className="search__submit"
+        type="submit"
         onClick={handleSubmit}
-        disabled={!searchQuery && !value} 
+        disabled={!searchQuery && !value}
       />
     </form>
   );

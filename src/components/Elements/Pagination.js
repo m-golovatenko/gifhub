@@ -52,7 +52,10 @@ function Pagination({ pagination, type }) {
         })}
       </ul>
       {page < totalCountPage && (
-        <Link to={query ? `/${type}/${query}/${+page + 1}` : `/${type}/${+page + 1}`} className="pages__nav">
+        <Link
+          to={query ? `/${type}/${query}/${+page + 1}` : `/${type}/${+page + 1}`}
+          className="pages__nav"
+        >
           Вперед
         </Link>
       )}

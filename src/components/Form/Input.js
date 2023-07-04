@@ -3,8 +3,8 @@ import React from 'react';
 function Input({ placeholder, value, searchInputRef, validate, searchQuery }) {
   React.useEffect(() => {
     validate(value);
-  // eslint-disable-next-line
-  }, [value])
+    // eslint-disable-next-line
+  }, [value]);
 
   return (
     <input
@@ -13,7 +13,7 @@ function Input({ placeholder, value, searchInputRef, validate, searchQuery }) {
       placeholder={placeholder}
       type="text"
       value={searchQuery}
-      onChange={e=>validate(e.target.value)}
+      onChange={e => validate(e.target.value)}
     />
   );
 }
