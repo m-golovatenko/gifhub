@@ -7,3 +7,10 @@
   font-weight: 400;
   line-height: 28px;
 }
+
+@media (max-width: 540px) {
+  .error__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
