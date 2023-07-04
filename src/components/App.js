@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className={darkTheme ? 'page page_dark' : 'page page_light'}>
-      <Header isDark={darkTheme} handleClick={handleClick} />
+      <Header darkTheme={darkTheme} handleClick={handleClick} />
 
       <main className="container">
         <Routes>

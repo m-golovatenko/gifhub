@@ -8,8 +8,8 @@ function Header({ darkTheme, handleClick }) {
       <button
         className={
           darkTheme
-            ? 'header__button-theme header__button-theme_light '
-            : 'header__button-theme header__button-theme_dark '
+            ? 'header__button-theme header__button-theme_light'
+            : 'header__button-theme header__button-theme_dark'
         }
         onClick={handleClick}
       />
