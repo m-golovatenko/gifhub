@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/gifhub/static/css/main.ea79de85.css",
-    "main.js": "/gifhub/static/js/main.721cf5ff.js",
-    "static/js/787.7501686e.chunk.js": "/gifhub/static/js/787.7501686e.chunk.js",
-    "static/media/Roboto-700.woff": "/gifhub/static/media/Roboto-700.3f2cbde6b72e8d05669f.woff",
-    "static/media/Roboto-400.woff": "/gifhub/static/media/Roboto-400.31012f9b3e3da44f87e8.woff",
-    "static/media/logo.svg": "/gifhub/static/media/logo.3afaf0ae4f08252d1def.svg",
-    "static/media/Junegull-400.woff": "/gifhub/static/media/Junegull-400.03bcce587c57fd173328.woff",
-    "static/media/Junegull-400.woff2": "/gifhub/static/media/Junegull-400.87a1b311431cab4f1b23.woff2",
-    "static/media/light-mode.svg": "/gifhub/static/media/light-mode.34e991338be367b0da72.svg",
-    "static/media/dark-mode.svg": "/gifhub/static/media/dark-mode.69300c8be5060713c62d.svg",
-    "static/media/search__submit.svg": "/gifhub/static/media/search__submit.bca639a2ee1bad7a18d1.svg",
-    "static/media/search__clear.svg": "/gifhub/static/media/search__clear.3151b504b851e61a1343.svg",
-    "index.html": "/gifhub/index.html",
-    "main.ea79de85.css.map": "/gifhub/static/css/main.ea79de85.css.map",
-    "main.721cf5ff.js.map": "/gifhub/static/js/main.721cf5ff.js.map",
-    "787.7501686e.chunk.js.map": "/gifhub/static/js/787.7501686e.chunk.js.map"
+    "main.css": "/gifhub/search/static/css/main.283e4ebd.css",
+    "main.js": "/gifhub/search/static/js/main.8fcbae92.js",
+    "static/js/787.7501686e.chunk.js": "/gifhub/search/static/js/787.7501686e.chunk.js",
+    "static/media/Roboto-700.woff": "/gifhub/search/static/media/Roboto-700.3f2cbde6b72e8d05669f.woff",
+    "static/media/Roboto-400.woff": "/gifhub/search/static/media/Roboto-400.31012f9b3e3da44f87e8.woff",
+    "static/media/logo.svg": "/gifhub/search/static/media/logo.3afaf0ae4f08252d1def.svg",
+    "static/media/Junegull-400.woff": "/gifhub/search/static/media/Junegull-400.03bcce587c57fd173328.woff",
+    "static/media/Junegull-400.woff2": "/gifhub/search/static/media/Junegull-400.87a1b311431cab4f1b23.woff2",
+    "static/media/light-mode.svg": "/gifhub/search/static/media/light-mode.34e991338be367b0da72.svg",
+    "static/media/dark-mode.svg": "/gifhub/search/static/media/dark-mode.69300c8be5060713c62d.svg",
+    "static/media/search__submit.svg": "/gifhub/search/static/media/search__submit.bca639a2ee1bad7a18d1.svg",
+    "static/media/search__clear.svg": "/gifhub/search/static/media/search__clear.3151b504b851e61a1343.svg",
+    "index.html": "/gifhub/search/index.html",
+    "main.283e4ebd.css.map": "/gifhub/search/static/css/main.283e4ebd.css.map",
+    "main.8fcbae92.js.map": "/gifhub/search/static/js/main.8fcbae92.js.map",
+    "787.7501686e.chunk.js.map": "/gifhub/search/static/js/787.7501686e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea79de85.css",
-    "static/js/main.721cf5ff.js"
+    "static/css/main.283e4ebd.css",
+    "static/js/main.8fcbae92.js"
   ]
 }
