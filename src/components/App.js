@@ -28,18 +28,27 @@ function App() {
 
       <main className="container">
         <Routes>
-          <Route 
-            path="/search" 
-            element={<Main setSearchGifs={setSearchGifs} isLoading={isLoading} setIsLoading={setIsLoading} />} />
+          <Route
+            path="/search"
+            element={
+              <Main
+                setSearchGifs={setSearchGifs}
+                isLoading={isLoading}
+                setIsLoading={setIsLoading}
+              />
+            }
+          />
 
           <Route
             path="/search/:query/:page"
-            element={<Main 
-                        searchGifs={searchGifs} 
-                        setSearchGifs={setSearchGifs} 
-                        isLoading={isLoading}
-                        setIsLoading={setIsLoading}
-                    />}
+            element={
+              <Main
+                searchGifs={searchGifs}
+                setSearchGifs={setSearchGifs}
+                isLoading={isLoading}
+                setIsLoading={setIsLoading}
+              />
+            }
           />
 
           <Route
@@ -63,7 +72,7 @@ function App() {
 
           <Route path="/search/gifs/:id" element={<GifPage gifs={searchGifs} />} />
 
-          <Route path="/" element={<Navigate to="/search" replace />} />
+          <Route exact path="/" element={<Navigate to="/search" replace />} />
 
           <Route path="*" element={<Error />} />
         </Routes>
