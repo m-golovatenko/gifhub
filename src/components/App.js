@@ -29,7 +29,7 @@ function App() {
       <main className="container">
         <Routes>
           <Route
-            path="/search"
+            path="/gifhub/search"
             element={
               <Main
                 setSearchGifs={setSearchGifs}
@@ -40,7 +40,7 @@ function App() {
           />
 
           <Route
-            path="/search/:query/:page"
+            path="/gifhub/search/:query/:page"
             element={
               <Main
                 searchGifs={searchGifs}
@@ -52,7 +52,7 @@ function App() {
           />
 
           <Route
-            path="/trending/:page"
+            path="/gifhub/trending/:page"
             element={
               <Trending
                 trendingGifs={trendingGifs}
@@ -64,15 +64,15 @@ function App() {
           />
 
           <Route
-            path="/random-gif"
+            path="/gifhub/random-gif"
             element={<RandomGif isLoading={isLoading} setIsLoading={setIsLoading} />}
           />
 
-          <Route path="/trending/gifs/:id" element={<GifPage gifs={trendingGifs} />} />
+          <Route path="/gifhub/trending/gifs/:id" element={<GifPage gifs={trendingGifs} />} />
 
-          <Route path="/search/gifs/:id" element={<GifPage gifs={searchGifs} />} />
+          <Route path="/gifhub/search/gifs/:id" element={<GifPage gifs={searchGifs} />} />
 
-          <Route exact path="/" element={<Navigate to="/search" replace />} />
+          <Route exact path="/" element={<Navigate to="/gifhub/search" replace />} />
 
           <Route path="*" element={<Error />} />
         </Routes>
